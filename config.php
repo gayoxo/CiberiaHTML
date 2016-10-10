@@ -1,8 +1,8 @@
 <?php
 define('Clavyuser','gayoxo@gmail.com');
 define('Clavyuserkey','ClaW1538457');
-define('Clavykey','5418891002236265');
-define('ClavyServer','localhost');
+define('Clavykey','2968420394025276');
+define('ClavyServer','a-note.fdi.ucm.es');
 define('ClavyPort','8080');
 define('ClavyDomine','Clavy');
 
