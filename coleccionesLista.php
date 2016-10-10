@@ -1,0 +1,145 @@
+<?php
+class CollectionElem
+{
+	
+	public $Numer =0; 
+	public $Nombre =""; 
+	public $Descripcion =""; 
+	public $Datos ="";
+	public $Imagen ="";
+	
+	
+    
+	public function __construct($Numer, $Nombre, $Descripcion, $Datos, $Imagen){
+        $this->Numer = $Numer;
+		$this->Nombre = $Nombre;
+		$this->Descripcion=$Descripcion;
+		$this->Datos=$Datos;
+		$this->Imagen=$Imagen;
+    }
+
+}
+
+class CollectionArray
+{
+	public $CollectionA =array(); 
+	
+	
+    public function __construct(array $campoA ){
+        $this->CollectionA = $campoA;
+    }
+    
+	
+	public function findDescripcion($numerID)
+	{
+	foreach ($this->CollectionA as $elem)
+		foreach ($elem as $elemV)
+			if ($elemV->Numer==$numerID)
+				return $elemV->Descripcion;
+			
+	return ""; 
+	}
+	
+	public function findDatos($numerID)
+	{
+	foreach ($this->CollectionA as $elem)
+		foreach ($elem as $elemV)
+			if ($elemV->Numer==$numerID)
+				return $elemV->Datos;
+			
+	return ""; 
+	}
+	
+	public function findNombre($numerID)
+	{
+	foreach ($this->CollectionA as $elem)
+		foreach ($elem as $elemV)
+			if ($elemV->Numer==$numerID)
+				return $elemV->Nombre;
+			
+	return ""; 
+	}
+	
+	public function findImagen($numerID)
+	{
+	foreach ($this->CollectionA as $elem)
+		foreach ($elem as $elemV)
+			if ($elemV->Numer==$numerID)
+				return $elemV->Imagen;
+			
+	return ""; 
+	}
+	
+}
+
+	$CollectionArrayAL=array(
+	new CollectionElem(
+		1,
+		"Mujeres intelectuales de la edad de plata",
+		"Esta colección reúne a un grupo de mujeres que publicaron ensayo, poesía, teatro y prosa durante la Edad de Plata. Coordinadora: Kirsty Hooper.",
+		"Id1=6&Desc1=Mujer",
+		"imagenes/COLECCION1.png"
+		),
+	
+	new CollectionElem(
+		2,
+		"Traductoras de la Edad de Plata",
+		"Esta colección reúne a un grupo de mujeres que publicaron en español traducciones de autores extranjeros. Se utiliza la herramienta @Note para realizar anotaciones colaborativas de textos en línea. Coordinadora: Amelia Sanz Cabrerizo.",
+		"Id1=6&Desc1=Mujer&Id2=2&Desc2=Traductor",
+		"imagenes/COLECCION3.png"
+		),
+		
+	new CollectionElem(
+		3,
+		"Muertos en conflicto (1936-1939)",
+		"Esta colección reúne a aquellos autores raros y olvidados que fallecieron por distintas causas durante la Guerra Civil. Se utiliza la herramienta Google Maps para localizar los lugares de fallecimiento. Coordinador: José Miguel González Soriano.",
+		"Id1=5&Desc1=1936&Or1=true&Id2=5&Desc2=1938&Or2=true&Id3=5&Desc3=1939&Or3=true&Id4=5&Desc4=1937&Or4=true",
+		"imagenes/COLECCION4.png"
+		),
+		
+	new CollectionElem(
+		4,
+		"Autores en exilio",
+		"Esta colección reúne escritores que sufrieron el exilio tras la Guerra Civil. Se utiliza la herramienta Google Maps para localizar los espacios del exilio. Coordinadora: Lucía Cotarelo Esteban.",
+		"Id1=3&Desc1=Sí",
+		"imagenes/COLECCION5.png"
+		),
+
+	new CollectionElem(
+		5,
+		"Protociencia-ficción",
+		"Esta colección reúne los textos de la “Biblioteca de Protociencia-ficción Agustín Jaureguizar” que han sido digitalizados por la Biblioteca UCM. Se aportan datos y metadatos externos a Mnemosine. Coordinadora: Marta Correa Román.",
+		"Id1=10&Desc1=Protociencia-ficción",
+		"imagenes/COLECCION6.png"
+		),
+
+	new CollectionElem(
+		6,
+		"Diálogos literarios",
+		"Esta colección reúne los textos dialogados que se publicaron durante la Edad de Plata. Se fomenta así la colaboración con el Grupo de Investigación UCM Dyalogica y su Biblioteca Digital del Diálogo Hispánico. Coordinadora: Mª Jesús Fraga.",
+		"Id1=0&Desc1=Dialogos",
+		"imagenes/COLECCION7.png"
+		),
+
+	new CollectionElem(
+		7,
+		"Literatura de compromiso político-social",
+		"En esta colección se pueden catalogar textos y colecciones de quiosco pertenecientes a este subgénero. Por ahora solo se muestran completas las colecciones La Novela Roja (1922-23), La Novela Proletaria (1932-33), Tesoro de la Literatura Revolucionaria (1933) y parcialmente El Cuento Semanal (1907-8). Pendiente de asignar coordinador.",
+		"Id1=39258&Desc1=196207&Or1=true&Id2=39258&Desc2=196311&Or2=true&Id3=39258&Desc3=198876&Or3=true",
+		"imagenes/COLECCION8.png"
+		),
+		
+		new CollectionElem(
+		8,
+		"Carmen de Burgos",
+		"Es una colección de los libros publicados por una autora individual. Coordinador: Pendiente de asignar.",
+		"Id1=1&Desc1=Carmen&Id2=1&Desc2=Burgos",
+		"imagenes/COLECCION9.png"
+		)
+	);
+	
+	
+	
+	$CollectionArrayA=new CollectionArray($CollectionArrayAL);
+
+?>
