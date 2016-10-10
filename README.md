@@ -1,5 +1,5 @@
-# MnemosineHTMLTest
-MnemosineHTMLTest
+# CiberiaHTML
+CiberiaHTML
 
 
-Test de HTM para la aplicacion MNEMOSINE que nos permita la interaccion con Clavy
+HTML para la aplicacion Ciberia que nos permita la interaccion con Clavy
