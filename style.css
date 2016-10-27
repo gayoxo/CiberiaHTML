@@ -332,7 +332,7 @@ input.barra_buscador_simple{
 font-family: mnemosine_minuscula;
   width: 70%;
   min-width: 200px;
-  border: solid;
+/*  border: solid; */
   height: 40px;
     font-size: 1.3em;
 }
@@ -340,12 +340,12 @@ font-family: mnemosine_minuscula;
 select.campo_valores_buscador_simple{
 width: 15%;
   min-width: 75px;
-  border: solid;
+/*  border: solid; */
   height: 40px;
 }
 
 input.buscar_buscador_simple{
-border: solid;
+/*border: solid;*/
   height: 40px;
 }
  
@@ -359,12 +359,14 @@ border: solid;
   width: 96.5%;
 }
 
- .Colecciones, .mysmartlibraryproyect, .quienes_somos, .zonIndex, .bases_legales{
+ .Colecciones, .mysmartlibraryproyect, .zonIndex, .bases_legales{
   width: 96.5%;
 }
 
 p.bases_legales_body{
   text-align: justify;
+  font-family: mnemosine_minuscula;
+   font-size: 1.3em;
 }
 
 .bases_legales{
@@ -420,9 +422,15 @@ text-align: center;
   margin: 0em 17%;
  } 
  
- button.buscar_buscador_simple {
+ button.buscar_buscador_simple{
   margin-bottom: 2em;
    font-family: mnemosine;
+   font-size: 1.3em;
+}
+
+p.mnemosinefont,h3.mnemosinefont {
+
+   font-family: mnemosine_minuscula;
    font-size: 1.3em;
 }
 
@@ -464,9 +472,11 @@ font-family: mnemosine;
 }
 
 a.menu_elem{
-font-family: mnemosine;
+font-family: mnemosine_minuscula;
+text-transform: uppercase;
 color: black;
-text-decoration:none
+text-decoration:none;
+font-size: 1.3em;
 }
 
 input.buttonnormal
@@ -483,6 +493,10 @@ hr.linea_horizontal {
   margin: 0em 6em;
 }
 
+img.iconomenu {
+	margin: 0em 0em 3em 0em;
+}
+
 
 img.iconomenu{
 
@@ -492,7 +506,7 @@ img.iconomenu{
 li.li_menunav
 {
 text-align: left;
-margin: 0em 0em 3em 0em;
+margin: 0em 0em 3em 0.1em;
 }
 
 li.li_menunavicon
@@ -615,11 +629,14 @@ a.coleccion_vinculo:hover{
 color:#00cdcd;
 }
 
+
+
 p.justifiedtext {
   margin: 2em 20%;
   text-align: justify;
-  font-family: diddot;
-  font-size: 1.1em;
+ /* font-family: diddot;*/
+ font-family: mnemosine_minuscula;
+  font-size: 1.3em;
   
 }
 
@@ -638,6 +655,11 @@ p.justifiedtext {
 .imagen_bloque {
   width: 20%;
   float: left;
+}
+
+img.imagen_bloque_baser {
+  width: 100%;
+      border-radius: 50%;
 }
 
 img.imagen_bloque_base {
@@ -659,8 +681,10 @@ text-align: left;
 
 p.texto-bloque_cuerpo {
 text-align: justify;
- font-family: diddot;
-   line-height: 1.5em;
+ /*font-family: diddot;*/
+  font-family: mnemosine_minuscula;
+ /*  line-height: 1.5em; */
+   font-size: 1.3em;
 }
   
 a.quienes_somos_link {
@@ -724,3 +748,13 @@ ul .menustyle{
     list-style-image: url('sqpurple.gif');
 }
 */
+span.green
+{
+	color: #00cdcd !important; 
+}
+
+a.green
+{
+	color: #00cdcd !important; 
+	text-decoration: none;
+}

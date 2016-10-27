@@ -1,6 +1,6 @@
-
+<hr class="linea_horizontal_footer">
 <div class="footer">
-	<hr class="linea_horizontal_footer">
+	
 	
 	<div class="footerContent">
 	
@@ -48,6 +48,18 @@
 		</div>
 		
 			<div class="footer_elemnt">
+		<a class="quienes_somos_link" href="http://www.madrid.org" target="_blank">
+					<img class="imagen_bloque_base" src="imagenes/cam.jpg" alt="">
+				</a>
+		</div>
+		
+		<div class="footer_elemnt">
+		<a class="quienes_somos_link" href="http://ec.europa.eu/esf/home.jsp?langId=es" target="_blank">
+					<img class="imagen_bloque_base" src="imagenes/fse.gif" alt="">
+				</a>
+		</div>
+		
+		<div class="footer_elemnt">
 		<a class="quienes_somos_link" href="http://www.ciberiaproject.com/" target="_blank">
 					<img class="imagen_bloque_base" src="imagenes/ciberiaproyect.png" alt="">
 				</a>

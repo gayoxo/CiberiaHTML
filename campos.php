@@ -62,19 +62,18 @@ class CampoArray
 	$Grupo0=array(new CampoElem(0,array(0),"Todos",false));
 
 	$Grupo1=array(
-	new CampoElem(1,array(-1,56330,56334),"Nombre",false),
-	new CampoElem(2,array(56468),"Función",false),
-	new CampoElem(3,array(56348),"Exilio",false),
-	new CampoElem(4,array(56339),"Fecha de nacimiento",true),
-	new CampoElem(5,array(56340),"Fecha de muerte",true),
-	new CampoElem(6,array(56347),"Género",false));
+	new CampoElem(1,array(-1,32888),"Nombre",false),
+	new CampoElem(2,array(32896),"Sexo",false),
+	new CampoElem(3,array(32897),"Nacionalidad",false));
 	
 	$Grupo2=array(
-	new CampoElem(7,array(-2,56473,56486,56521),"Titulo",false),
-	new CampoElem(8,array(56488,56492,56491,56490),"Datos de Publicación",false),
-	new CampoElem(9,array(56497,56502,56504,56508,56510),"Materia",false),
-	new CampoElem(10,array(-3,56521),"Colección o serie",false),
-	new CampoElem(11,array(56549,56550,56551,56553,56554),"Otros Campos",false)
+	new CampoElem(7,array(-2,32957),"Título",false),
+	new CampoElem(8,array(32958),"Autor",false),
+	new CampoElem(8,array(32750),"Año",false),
+	new CampoElem(9,array(33445),"Género",false),
+	new CampoElem(10,array(33449),"Recursos estilísticos",false),
+	new CampoElem(11,array(33451),"Tema",false),
+	new CampoElem(11,array(33453),"Formatos",false)
 	);
 	
 	$CamposArrayA=array(0 => $Grupo0,"Autor" =>$Grupo1,"Obra" => $Grupo2);
