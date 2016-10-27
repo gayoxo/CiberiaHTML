@@ -78,7 +78,6 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	$BusquedaStringLabelIN=$_POST["BusquedaStringLabelIN"];
 
 	
-	
 	if (empty($FiltroNuevo))
 		$FiltroNuevo=false;
 	
@@ -193,11 +192,6 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 			curl_close($curl);
 			//var_dump($JObj);
 			
-			echo "<span class=\"resultado_test\">";
-			echo "Resultado para la busqueda: <span class=\"resultado_test_value\">".$BusquedaStringLabel."</span>";
-			echo "</span>";
-			echo "</br>";
-			echo "</br>";
 			
 			$arraYDocumentos=array();
 			$TotalValue=0;
@@ -218,10 +212,6 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 				
 				}
 			}
-			echo "<span class=\"resultado_test_number\">";
-			echo "El numero de elementos encontrados es : <span class=\"resultado_test_number_value\">".$TotalValue."</span>";
-			echo "</span>";
-			echo "</br>";
 			
 			?>
 			</br>
@@ -513,5 +503,5 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 ?>
 
 </div>
-
+</br>
 <?php include 'botton.php'; ?>

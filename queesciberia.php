@@ -5,7 +5,7 @@
 
 </div>	
 <div class="mysmartlibraryproyect">
-	<p class="mysmartlibraryproyect_texto_Cabecera">¿Qué es Ciberia?</p>
+	<p class="mysmartlibraryproyect_texto_Cabecera">¿Qué es Mnemosine?</p>
 	<hr class="linea_horizontal">
 	<div class="smart_library_body">
 	

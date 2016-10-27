@@ -1,20 +1,84 @@
 <?php include 'top.php'; ?>
 <?php $LinkAtras=""; ?>
 <?php include 'cabecera.php'; ?>
-	</br>
 
 <?php include 'form_buscador.php'?>
 	
-<div class="zonIndex">
-	<p class="zonaIndexCentro">Bienvenidos a la Biblioteca Digital de “La otra Edad de Plata”.</p>	
-	<hr class="linea_horizontal">
-	<p class="zonaIndexCentro_text">
-	En <i>Mnemosine</i> podrá encontrar enlaces a textos digitalizados y datos de autores y obras que pertenecen al repertorio de raros y olvidados (1868-1939).<br> 
-	<br>
-Los registros de <i>Mnemosine</i> proceden de metadatos importados por <a class="zonaIndexCentro_text_link" href="http://clavy.fdi.ucm.es" target="_blank">Clavy</a> 
-desde <a class="zonaIndexCentro_text_link" href="http://www.bne.es/es/Catalogos/BibliotecaDigitalHispanica/Inicio/index.html" target="_blank">Biblioteca Digital Hispánica</a> y 
-desde <a class="zonaIndexCentro_text_link" href="http://babel.hathitrust.org/cgi/mb?a=listis;c=576801556" target="_blank">HathiTrust</a> con el apoyo de la <a class="zonaIndexCentro_text_link" href="http://biblioteca.ucm.es" target="_blank">Biblioteca UCM</a>.
-	</p>
-</div>	
+<?php include 'listanegra.php'?>	
+
 	
-<?php include 'botton.php'; ?>
+
+	
+<?php 
+	
+	$Basica=$_POST["BarraBasica"];
+	$Basica2=$_POST["Campo"];
+	
+	$TypeNumber=intval($Basica2);
+	
+	$Inside=$CamposArray->isinside($TypeNumber);
+	
+	$TypeNumber=$CamposArray->findElem($TypeNumber);
+	
+
+	$ArrayBasico=preg_split("/[\s,]+/",$Basica); 
+	
+	$BusquedaArray=array();
+	
+	$Busqueda1A=array();
+	array_push($Busqueda1A,0);
+	
+	$Busqueda1= array("value"=>"Obra","type" => $Busqueda1A,"positive" => true, "and" =>false , "exacto"=>true) ;
+	
+	
+	$Busqueda1B=array();
+	array_push($Busqueda1B,0);
+	
+	$Busqueda2= array("value"=>"Autor","type" => $Busqueda1B,"positive" => true, "and" =>false , "exacto"=>true) ;
+	
+	
+	$BusquedaStringLabel="";
+	
+	
+	
+	array_push($BusquedaArray,$Busqueda1);
+	array_push($BusquedaArray,$Busqueda2);
+	
+	
+/*	foreach ($ArrayBasico as $elem)
+	{
+		if (preg_match("/^\".+\"$/",$elem))
+		{
+			$elem=str_replace("\"","",$elem);
+			$incluseList=true;
+		}
+		
+		if (!empty($elem)&&($incluseList||!listanegra($elem)))
+		{
+			
+			if (!empty($BusquedaStringLabel))
+				$BusquedaStringLabel=$BusquedaStringLabel."AND ";
+			
+			
+			$BusquedaStringLabel=$BusquedaStringLabel.$elem." ";
+			
+			$elemE=$elem;
+				
+			if ($Inside)
+				$elemE="*".$elem."*";
+			
+			$Busqueda= array("value"=>$elemE,"type" => $TypeNumber,"positive" => true, "and" =>true , "exacto"=>true) ;
+			array_push($BusquedaArray,$Busqueda);
+			
+		}
+	}*/
+	
+	/*var_dump($BusquedaArray);*/
+	
+	/*$Busqueda= array("type" => $TypeNumber,"positive" => true, "and" =>false) ;
+	$BusquedaArray=array($Basica => $Busqueda);*/
+	
+	include 'buscar_codigo_general_intro.php';
+	
+	
+	?>
