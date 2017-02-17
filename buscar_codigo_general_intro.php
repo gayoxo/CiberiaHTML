@@ -100,6 +100,8 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	$service_url = $ServerService.'active';
 	$curl = curl_init($service_url);
 
+	curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 60); // Setting the amount of time (in seconds) before the request times out
+	curl_setopt($curl, CURLOPT_TIMEOUT, 180);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	$curl_response = curl_exec($curl);
 	if ($curl_response === false) {
@@ -114,6 +116,8 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 		
 	$curl = curl_init($service_url);
 	
+	curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 60); // Setting the amount of time (in seconds) before the request times out
+	curl_setopt($curl, CURLOPT_TIMEOUT, 180);
 	
 		
 		
@@ -166,6 +170,8 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	
 	$BusquedaArray = json_encode($BusquedaArray);    
 	
+	curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 60); // Setting the amount of time (in seconds) before the request times out
+	curl_setopt($curl, CURLOPT_TIMEOUT, 180);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 	curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string); 

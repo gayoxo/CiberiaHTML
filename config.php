@@ -13,6 +13,6 @@ define('TZN_DB_EXTERNAL_HOST','repositorios.fdi.ucm.es');
 define('TZN_DB_EXTERNAL_USER','ilsaserver');       // Nombre del usuario de la base de datos
 define('TZN_DB_EXTERNAL_PASS','platano');           // Contraseña del usuario de la base de datos
 
-set_time_limit(0);
+set_time_limit(3200);
 ?>
 
