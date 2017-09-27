@@ -180,7 +180,7 @@ $ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/Finder
 			
 			$IDDOcument=$DocumentID;
 			$Description="";
-			$Icon="";
+			$Icon="imagenes/logomenu2.png";
 			$Info= array();
 			
 			foreach ($JObj as $EtiquetaV=>$arrayE) {
@@ -192,7 +192,7 @@ $ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/Finder
 				if ($EtiquetaV=='Description')
 					$Description=$arrayE;
 				
-				if ($EtiquetaV=='Icon')
+				if ($EtiquetaV=='Icon'&&!empty($arrayE))
 					$Icon=$arrayE;
 				
 				if ($EtiquetaV=='Info')
