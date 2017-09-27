@@ -18,8 +18,7 @@ function ProcesaLista($ArrayE,$lis)
 		$DocRef="";
 		$Info= array();
 		$DescRef="";
-		$RecRef="";
-	$DescIcon="";
+		
 	
 	foreach ($arrayV as $EtiquetaV=>$Valor)
 	{
@@ -43,12 +42,6 @@ function ProcesaLista($ArrayE,$lis)
 				
 		if ($EtiquetaV=='Info')
 			$Info=$Valor;
-		
-		if ($EtiquetaV=='RecRef')
-			$RecRef=$Valor;
-		
-		if ($EtiquetaV=='DescIcon')
-			$DescIcon=$Valor;
 	}
 
 	if (!empty($Type))
@@ -58,10 +51,7 @@ function ProcesaLista($ArrayE,$lis)
 	
 	if (!empty($Info))
 	{
-		if ($Type=='F. Recursos'||$Type=='F.Enriquecida'||$Type=='Recursos')
-			echo "<details>";
-		else
-			echo "<details open>";
+		echo "<details open>";
 				
 		echo "<summary>";
 	}
@@ -78,15 +68,6 @@ function ProcesaLista($ArrayE,$lis)
 		if ($DocRef==true)
 				$Result= "<a class=\"avalueE\" href=\"ver_documento.php?documento=".$Value."\" target=\"_blank\" >".$Show."</a>";
 			else 
-		if (($RecRef==true))
-		{
-			if (!empty($DescIcon))
-				$Result= "<a class=\"avalueE\" href=\"".$Value."\" target=\"_blank\" ><img class=\"iconvalueE\" src=\"".$DescIcon."\" alt=\"".$DescIcon."\" >OPEN</a>";
-			else
-				$Result= "<a class=\"avalueE\" href=\"".$Value."\" target=\"_blank\" >".$Value."</a>";
-				
-		}
-			else
 			{
 				
 				$Value = eregi_replace('(((f|ht){1}tp://)[-a-zA-Z0-9@:%_+.~#?&//=]+)','<a href="\1" target="_blank">\1 </a>', $Value);
@@ -197,7 +178,6 @@ $ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/Finder
 				
 				if ($EtiquetaV=='Info')
 					$Info=$arrayE;
-				
 				
 
 				/*foreach ($valor as $EtiquetaV=>$arrayE)

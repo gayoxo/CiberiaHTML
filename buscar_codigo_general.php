@@ -411,6 +411,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 						$valorIZ=$ValorE;
 							else if ($Etiqueta=='Atributos')
 								$valorElem=$ValorE;
+
 					
 				}
 				show_document($valorID,$valorDesc,$valorIZ,$counterdocT,$valorElem,$DescObject);

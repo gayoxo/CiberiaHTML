@@ -585,6 +585,12 @@ hr.linea_horizontal_footer{
 
 img.verDocumentIcon{
   width: 150px;
+  border-radius: 50%;
+}
+
+img.iconvalueE {
+    width: 150px;
+    border-radius: 50%;
 }
 
 img.documento_unico_icono{
