@@ -389,7 +389,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 				//	echo $counterdoc;
 				$valorID="";
 				$valorDesc="";
-				$valorIZ="";
+				$valorIZ="imagenes/logomenu2.png";
 				$valorElem=array();
 				foreach ($arrayEU as $Etiqueta=>$ValorE)
 				{
@@ -398,7 +398,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 						$valorID=$ValorE;
 					else if ($Etiqueta=='Description')
 						$valorDesc=$ValorE;
-						else if ($Etiqueta=='Icon')
+						else if ($Etiqueta=='Icon'&&!empty($ValorE))
 						$valorIZ=$ValorE;
 							else if ($Etiqueta=='Atributos')
 								$valorElem=$ValorE;

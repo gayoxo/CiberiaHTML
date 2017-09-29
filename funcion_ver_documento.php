@@ -1,6 +1,8 @@
 <?php
+
 function show_document($arg_1,$arg_2,$arg_3,$arg_4,$arg_5,$DescObject)
 {
+
 	echo "<div class=\"documento_unico\">";
 	echo "<div class=\"documento_unico_orden\">";
 	echo $arg_4;

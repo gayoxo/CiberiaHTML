@@ -414,6 +414,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 
 					
 				}
+
 				show_document($valorID,$valorDesc,$valorIZ,$counterdocT,$valorElem,$DescObject);
 			}
 			echo "</div>";	
