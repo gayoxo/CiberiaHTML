@@ -44,7 +44,17 @@
  
 }
 
+a.nav-toggle {
+    color: Black;
+    font-size: 1.4em;
+    font-family: mnemosine_minuscula;
+}
 
+a.nav-toggle:hover {
+    color: #31b49d;
+    font-size: 1.4em;
+    font-family: mnemosine_minuscula;
+}
 
 
 @font-face {   
@@ -559,6 +569,8 @@ a.linkdocument{
 
 .footer{
 margin: 1em 0% 2em 10%;
+float: left;
+width: 87%;
 }
 
 
