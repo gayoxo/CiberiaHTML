@@ -11,14 +11,8 @@
 	
 <?php 
 	
-	$Basica=$_POST["BarraBasica"];
-	$Basica2=$_POST["Campo"];
-	
-	$TypeNumber=intval($Basica2);
-	
-	$Inside=$CamposArray->isinside($TypeNumber);
-	
-	$TypeNumber=$CamposArray->findElem($TypeNumber);
+	$Basica="/.*./";
+	$BusquedaStringLabelQ=$Basica;
 	
 
 	$ArrayBasico=preg_split("/[\s,]+/",$Basica); 
