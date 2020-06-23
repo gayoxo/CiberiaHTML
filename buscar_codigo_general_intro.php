@@ -172,7 +172,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	
 	$BusquedaData=array("q" =>$BusquedaStringLabelQ ,"busqueda" => $BusquedaArray, "filtro" => $FiltroData,"faplicado" => $FiltroAplicar,"resumen" => $Desc);
 	
-	var_dump($BusquedaData);
+	//var_dump($BusquedaData);
 		
 	$data_string = json_encode($BusquedaData);    
 	
