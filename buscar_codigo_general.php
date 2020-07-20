@@ -69,14 +69,14 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 
 
 
-	$Campo=$_POST["Campo"];
-	$Start=$_POST["Start"];
-	$Limite=$_POST["Limite"];
-	$FiltroA=$_POST["Filtro"];
-	$FiltroNuevo=$_POST["FiltroNuevo"];
-	$BusquedaARRAY=$_POST["BusquedaARRAY"];
-	$BusquedaStringLabelIN=$_POST["BusquedaStringLabelIN"];
-	$BusquedaStringLabelQIN=$_POST["BusquedaStringLabelQIN"];
+	$Campo=strip_tags($_POST["Campo"]);
+	$Start=strip_tags($_POST["Start"]);
+	$Limite=strip_tags($_POST["Limite"]);
+	$FiltroA=strip_tags($_POST["Filtro"];
+	$FiltroNuevo=strip_tags($_POST["FiltroNuevo"]);
+	$BusquedaARRAY=strip_tags($_POST["BusquedaARRAY"]);
+	$BusquedaStringLabelIN=strip_tags($_POST["BusquedaStringLabelIN"]);
+	$BusquedaStringLabelQIN=strip_tags($_POST["BusquedaStringLabelQIN"]);
 
 
 	
@@ -209,6 +209,8 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 			
 			if (isset($NamedQuerry)&&!empty($NamedQuerry))
 				$BusquedaStringLabelQ=$NamedQuerry;
+			
+			strip_tags($BusquedaStringLabelQ);
 			
 			echo "<span class=\"resultado_test\">";
 			echo "Resultado para la busqueda: <span class=\"resultado_test_value\">".$BusquedaStringLabelQ."</span>";
