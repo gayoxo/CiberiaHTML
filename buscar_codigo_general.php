@@ -72,7 +72,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	$Campo=strip_tags($_POST["Campo"]);
 	$Start=strip_tags($_POST["Start"]);
 	$Limite=strip_tags($_POST["Limite"]);
-	$FiltroA=strip_tags($_POST["Filtro"];
+	$FiltroA=strip_tags($_POST["Filtro"]);
 	$FiltroNuevo=strip_tags($_POST["FiltroNuevo"]);
 	$BusquedaARRAY=strip_tags($_POST["BusquedaARRAY"]);
 	$BusquedaStringLabelIN=strip_tags($_POST["BusquedaStringLabelIN"]);
@@ -427,7 +427,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 						$valorID=$ValorE;
 					else if ($Etiqueta=='Description')
 						$valorDesc=$ValorE;
-						else if ($Etiqueta=='Icon'&&!empty($ValorE))
+						else if ($Etiqueta=='Icon'&&!empty($ValorE)&&(@get_headers($ValorE)[0] != 'HTTP/1.1 404 Not Found'))
 						$valorIZ=$ValorE;
 							else if ($Etiqueta=='Atributos')
 								$valorElem=$ValorE;
