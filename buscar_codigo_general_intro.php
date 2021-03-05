@@ -117,7 +117,7 @@ function ArrayFiltro($TypeID,$arrayFiltro,$Basica,$Campo,$Start,$Limite,$FiltroA
 	{
 		curl_close($curl);
 		$service_url = $ServerService.'find?userclavy='.Clavyuser.'&passwordclavy='.Clavyuserkey.'&keyclavy='.Clavykey.'&start='.$Start.'&limit='.$Limite;
-		$service_url= $service_url.
+
 		
 	$curl = curl_init($service_url);
 	
