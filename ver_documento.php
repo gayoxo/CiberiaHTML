@@ -80,7 +80,9 @@ function ProcesaLista($ArrayE,$lis)
 			else 
 		if (($RecRef==true))
 		{
-			if (!empty($DescIcon))
+			
+			
+			if (!empty($DescIcon)&&(@get_headers($DescIcon)[0] != 'HTTP/1.1 404 Not Found'))
 				$Result= "<a class=\"avalueE\" href=\"".$Value."\" target=\"_blank\" ><img class=\"iconvalueE\" src=\"".$DescIcon."\" alt=\"".$DescIcon."\" >OPEN</a>";
 			else
 				$Result= "<a class=\"avalueE\" href=\"".$Value."\" target=\"_blank\" >".$Value."</a>";
@@ -204,7 +206,7 @@ $ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/Finder
 				if ($EtiquetaV=='Description')
 					$Description=$arrayE;
 				
-				if ($EtiquetaV=='Icon'&&!empty($arrayE))
+				if ($EtiquetaV=='Icon'&&!empty($arrayE)&&(@get_headers($arrayE)[0] != 'HTTP/1.1 404 Not Found'))
 					$Icon=$arrayE;
 				
 				if ($EtiquetaV=='Info')

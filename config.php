@@ -1,10 +1,11 @@
 <?php
-define('Clavyuser','USER');
-define('Clavyuserkey','PASS');
-define('Clavykey','CLAVYkey');
+define('Clavyuser','gayoxo@gmail.com');
+define('Clavyuserkey','ClaW1538457');
+define('Clavykey','4676363535040544');
 define('ClavyServer','clavy.fdi.ucm.es');
-define('ClavyPort','PORT');
+define('ClavyPort','8080');
 define('ClavyDomine','Clavy');
+define('ClavyService','FinderL');
 
 //define('TZN_ODA_HOST','repositorios.fdi.ucm.es');
 
