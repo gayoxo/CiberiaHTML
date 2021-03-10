@@ -65,7 +65,7 @@ new FiltroElem(111888,"Idiomas",false),
 new FiltroElem(111885,"Año",false),
 new FiltroElem(111953,"Género",false),
 new FiltroElem(111956,"Recursos estilísticos",false),
-new FiltroElem(111962,"Tema",false),
+new FiltroElem(111884,"Autor",false),
 new FiltroElem(111967,"Formatos",false),
 new FiltroElem(111974,"Programas informáticos",false));
 
