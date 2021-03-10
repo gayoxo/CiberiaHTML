@@ -164,7 +164,7 @@ if (!isset($DocumentID)||($DocumentID==0))
 	exit();
 }
 	
-$ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/Finder/';
+$ServerService='http://'.ClavyServer.':'.ClavyPort.'/'.ClavyDomine.'/rest/'.ClavyService.'/';
 	//$service_url = $ServerService.'getPlainDocument';
 	$service_url = $ServerService.'getPlainDocument?userclavy='.Clavyuser.'&passwordclavy='.Clavyuserkey.'&keyclavy='.Clavykey.'&iddocument='.$DocumentID;
 	$curl = curl_init($service_url);
